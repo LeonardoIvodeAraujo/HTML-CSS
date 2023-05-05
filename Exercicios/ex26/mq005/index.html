@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos.media-query.css">
 </head>
-<body>
+<body onresize="mudoutamanho()">
     <header>
         <h1>Meu site</h1>
         <img src="outline_menu_black_24dp.png" alt="menu" onclick="clickMenu()">
@@ -32,6 +33,14 @@
         </article>
     </main>
     <script>
+        function mudoutamanho(){
+            if(window.innerWidth >= 768){
+                itens.style.display = 'block'
+
+            }else{
+                itens.style.display = 'none'
+            }
+        }
         function clickMenu() {
            
             if(itens.style.display == 'block'){
